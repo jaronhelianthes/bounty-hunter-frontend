@@ -1,8 +1,8 @@
-// middleware.ts
+// proxy.ts
 import { createClient } from '@/lib/supabaseServer'
 import { NextResponse, type NextRequest } from 'next/server'
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const response = NextResponse.next({
     request: {
       headers: request.headers,
