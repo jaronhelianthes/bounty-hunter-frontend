@@ -36,14 +36,14 @@ export default function AuthPage() {
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <p className="animate-pulse">Loading...</p>
+        <p className="animate-pulse animate-in fade-in duration-300">Loading...</p>
       </div>
     )
   }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50">
-      <Card className="w-[400px] animate-fade-in-up">
+      <Card className="w-[400px] animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold">Bounty Hunter</CardTitle>
           <CardDescription>
@@ -56,7 +56,7 @@ export default function AuthPage() {
             className="w-full group hover:animate-pulse"
             size="lg"
           >
-            <GitHubLogoIcon className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+            <GitHubLogoIcon className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
             Sign in with GitHub
           </Button>
         </CardContent>
