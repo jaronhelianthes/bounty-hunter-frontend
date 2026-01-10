@@ -41,10 +41,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
       if (currentSession?.user) {
         const { data, error } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('user_id', currentSession.user.id)
-          .single();
+        .from('profiles')
+        .select('*')
+        .eq('id', currentSession.user.id)
+        .single();
 
         if (error) {
           console.error('Error fetching user profile:', error);
